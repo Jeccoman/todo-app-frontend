@@ -49,8 +49,7 @@ export default function DashboardLayout({
                 <div className="flex-shrink-0 flex items-center">
                   <h1 className="text-xl font-bold">Todo & Task Manager</h1>
                 </div>
-                
-                {/* Desktop Navigation */}
+     
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-4">
                   {navItems.map((item) => (
                     <Link
@@ -65,7 +64,6 @@ export default function DashboardLayout({
                 </div>
               </div>
 
-              {/* Desktop User Menu */}
               <div className="hidden sm:flex items-center space-x-4">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -89,7 +87,6 @@ export default function DashboardLayout({
                 </DropdownMenu>
               </div>
 
-              {/* Mobile menu button */}
               <div className="sm:hidden flex items-center">
                 <Button
                   variant="ghost"
@@ -141,8 +138,6 @@ export default function DashboardLayout({
             </div>
           )}
         </nav>
-
-        {/* Main content */}
         <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {children}
         </main>

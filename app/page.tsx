@@ -10,7 +10,6 @@ export default function Home() {
   const { isAuthenticated, token } = useAuthStore();
 
   useEffect(() => {
-    // Check if we have a token in localStorage
     const storedToken = localStorage.getItem('token');
     
     if (storedToken || isAuthenticated) {

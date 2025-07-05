@@ -9,7 +9,6 @@ export const apiClient = axios.create({
   },
 });
 
-// Request interceptor to add auth token
 apiClient.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
@@ -23,12 +22,10 @@ apiClient.interceptors.request.use(
   }
 );
 
-// Response interceptor to handle errors
 apiClient.interceptors.response.use(
   (response) => response,
   (error: AxiosError) => {
     if (error.response?.status === 401) {
-      // Unauthorized - redirect to login
       localStorage.removeItem('token');
       window.location.href = '/login';
     }
